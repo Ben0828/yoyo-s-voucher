@@ -6,61 +6,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>给全世界最独一无二的美少女yoyo</title>
     <style>
-        /* * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        } */
-        /* html,body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body{
             font-family: Arial, Helvetica, sans-serif;
             width: 100%;
-        } */
-        .container{
+            height: 100%;
+            background-image: url(./background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0;
+            padding: 0;
+        }
+        /* 顶栏 */
+        .top{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 1500px;
+            overflow: hidden;
+            /* background-color: #f0f0f0; */
         }
+        .top div{
+            max-width: 1000px;
+            max-height: 200px;
+            text-align: center;
+        }
+        .top div p{
+            font-size: 25px;
+        }
+        /* 左侧栏样式 */
+        .sidebar{
+            position: fixed; 
+            top: 200px;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            /* background-color: #f0f0f0; */
+        }
+        /* 右侧主体内容样式 */
+        .content{
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: scroll;
+            /* padding: 20px; */
+        }
+        /* 彩蛋 */
+        .egg{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 50px;
+        }
+        .egg p{
+            font-size: 12px;
+        }
+        /* 兑换券 */
         .voucher{
             width: 1260px;
             height: 710px;
         }
+        /* 将所有页面内容的显示状态设置为隐藏 */
+        #page1, #page2, #page3 {
+            display: none;
+        }
+
+        /* 显示默认页面 */
+        #default_page{
+            display: block;
+        }
+        /* 控制链接的样式 */
+        a {
+        color: #000; /* 默认颜色 */
+        text-decoration: none; /* 默认不显示下划线 */
+        }
+
+        a:hover {
+        color: #000; /* 鼠标悬停时的颜色 */
+        }
+
+        a:visited {
+        color: #000; /* 访问过的链接的颜色 */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p style="font-size: 50px;">
-            首先，祝全天下最可爱的美少女yoyo小姐生日快乐！<br>
-            其次，由于时间太紧加上学艺不精哈哈哈，对目前此网站的内容和功能的简陋感到抱歉。<br>
-            但是，在此承诺，以下的兑换券都是真实且有效的！<br>
-            以及，未来我会对这个网站进行升级的哟！
-        </p>
-        <div class=".voucher">
-            <img style="margin-top: 50px;" src="./pictures/wish.png">
+    <div class="top">
+        <div>
+            <p>
+                yoyo天下第一！
+            </p>
         </div>
-        <div class=".voucher">
-            <img style="margin-top: 50px;" src="./pictures/flower.png">
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" onclick="showPage('default_page')">首页</a></li>
+            <li><a href="#" onclick="showPage('page1')">兑换券</a></li>
+            <!-- <li><a href="#" onclick="showPage('page2')">页面 2</a></li>
+            <li><a href="#" onclick="showPage('page3')">页面 3</a></li> -->
+        </ul>
+    </div>
+    <div class="content">
+        <div id="default_page">
+            <p>
+                这是给全天下最可爱最无敌的美少女yoyo的生日礼物，她的生日在3月14日喔！<br>
+                我和她相识在2023年2月17日的中午！
+                我们在2023年3月4日一起看了周杰伦演唱会！
+                此网站会进行不停地更新优化哦！<br>
+                当前版本V0.10，更新时间2023年3月18日。
+            </p>
         </div>
-        <div class=".voucher">
-            <img style="margin-top: 50px;" src="./pictures/snacks.png">
+        <div id="page1">
+            <div class=".voucher">
+                <img style="margin-top: 50px;" src="./pictures/wish.png">
+            </div>
+            <div class=".voucher">
+                <img style="margin-top: 50px;" src="./pictures/flower.png">
+            </div>
+            <div class=".voucher">
+                <img style="margin-top: 50px;" src="./pictures/snacks.png">
+            </div>
+            <div class=".voucher">
+                <img style="margin-top: 50px;" src="./pictures/doll.png">
+            </div>
+            <div class=".voucher">
+                <img style="margin-top: 50px;" src="./pictures/makeup.png">
+            </div>
+            <div class=".voucher">
+                <img style="margin-top: 50px;" src="./pictures/come.png">
+            </div>
         </div>
-        <div class=".voucher">
-            <img style="margin-top: 50px;" src="./pictures/doll.png">
+        <div id="page2">
+            <h2>页面 2</h2>
+            <p>这是页面 2 的内容。</p>
         </div>
-        <div class=".voucher">
-            <img style="margin-top: 50px;" src="./pictures/makeup.png">
+        <div id="page3">
+            <h2>页面 3</h2>
+            <p>这是页面 3 的内容。</p>
         </div>
-        <div class=".voucher">
-            <img style="margin-top: 50px;" src="./pictures/come.png">
-        </div>
+    </div>
+    <div class="egg">
         <p>
             You had me at "HELLO".
             你还记得这句话嘛
         </p>
     </div>
+    <script>
+        function showPage(pageId) {
+            // 隐藏所有页面
+            var pages = document.querySelectorAll('.content > div');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            // 显示指定页面
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
